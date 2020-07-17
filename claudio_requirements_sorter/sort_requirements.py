@@ -11,9 +11,10 @@ def _get_requirements_pieces(requirements: List[str]) -> List[Tuple[str, str]]:
     requirement_pieces = []
     for requirement in requirements:
         for sep in ["==", ">=", "<="]:
-            index = requirement.index(sep)
-            requirement_pieces.append((requirement[:index], requirement[index:]))
-            break
+            if sep in requirement:
+                index = requirement.index(sep)
+                requirement_pieces.append((requirement[:index], requirement[index:]))
+                break
         else:
             raise ValueError(f"Invalid separator in: {requirement}")
 
