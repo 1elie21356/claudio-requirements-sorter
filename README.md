@@ -1,4 +1,4 @@
-# claudio-sorter
+# claudio-requirements-sorter
 
 ## The way requirements files should look 
 
