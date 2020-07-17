@@ -31,7 +31,7 @@ setup(
     packages=find_packages(include=["claudio_requirements_sorter"]),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/1elie21356/claudio-sorter',
+    url='https://github.com/1elie21356/claudio-requirements-sorter',
     version='0.5.0',
     zip_safe=False,
 )
