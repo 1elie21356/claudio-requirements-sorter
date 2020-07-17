@@ -14,5 +14,5 @@ def main(src: str, dst: str) -> int:
     new_requirements = sort_requirements(requirements=requirements)
     dst.write("\n".join(new_requirements))
 
-    click.echo(f"Successfully wrote to {dst}")
+    click.echo(f"Successfully wrote to {dst.name}")
     return 0
