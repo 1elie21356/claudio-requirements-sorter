@@ -15,10 +15,11 @@ def test_sort_requirements(requirements):
 
 def test_command_line_interface(requirements):
     """Test the CLI."""
+    src = "unsorted_requirements.txt"
+    dst = "sorted_requirements.txt"
+
     runner = CliRunner()
     with runner.isolated_filesystem():
-        src = "fake_requirements.txt"
-        dst = "sorted_requirements.txt"
         with open(src, "w") as f:
             f.write("\n".join(requirements["unsorted_requirements"]))
 
